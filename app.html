@@ -70,13 +70,15 @@
                     <h5>Enter Values</h5>
                     <form class="row gy-2 gx-3">
                         <div class="col">
-                            <input class="form-control" type="number" id="startValue" placeholder="0">
+                            <input class="form-control" type="number" id="startValue" placeholder="Start Value"
+                            value=0 aria-label="Start Value">
                         </div>
                         <div class="col">
-                            <input class="form-control" type="number" id="endValue" placeholder="100">
+                            <input class="form-control" type="number" id="endValue" placeholder="End Value"
+                            value=100 aria-label="End Value">
                         </div>
                         <div class="col-12 d-flex justify-content-end">
-                            <button type="button" class="btn btn-dark btn-lg">Display</button>
+                            <button type="button" id="btnSubmit" class="btn btn-dark btn-lg">Display</button>
                         </div>
                     </form>
                     <h2 class="mt-5 border-bottom border-2">Results</h2>
