@@ -1,12 +1,7 @@
 // get values
-alert("hello before");
-
 function getValues() {
-
-    alert("hello");
     let startValue = document.getElementById("startValue").value;
     let endValue = document.getElementById("endValue").value;
-
     // get integers
     let startValue = parseInt(startValue);
     let endValue = parseInt(endValue);
@@ -14,7 +9,6 @@ function getValues() {
     let numbers = generateNumbers(startValue, endValue);
     displayNumbers(numbers);
 }
-
 
 // generate numbers
 function generateNumbers(sValue, eValue) {
