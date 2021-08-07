@@ -6,9 +6,14 @@ function getValues() {
     startValue = parseInt(startValue);
     endValue = parseInt(endValue);
 
+if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
     let numbers = generateNumbers(startValue, endValue);
     displayNumbers(numbers);
+} else {
+    alert("You must enter integers");
 }
+}
+
 
 // generate numbers
 function generateNumbers(sValue, eValue) {
@@ -23,10 +28,16 @@ function generateNumbers(sValue, eValue) {
 // display numbers
 function displayNumbers(numbers) {
     let templateRows = "";
+    let className = "";
     for (let index = 0; index < numbers.length; index++) {
 
         let number = numbers[index];
-        templateRows += `<tr><td>${number}</td></tr>`;
+        if (number % 2 == 0) {
+            className = "even";
+        } else {
+            className = "odd";
+        }
+        templateRows += `<tr><td class="${className}">${number}</td></tr>`;
     }
     document.getElementById("results").innerHTML = templateRows;
 }
